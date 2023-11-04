@@ -10,7 +10,7 @@ test("test", () => {
   });
 
   expect(() =>
-    element.dispatchEvent(new CustomEvent(myEventType))
+    element.dispatchEvent(new window.CustomEvent(myEventType))
   ).not.toThrowError();
 
   expect(assertCount).toBe(1);
